@@ -19,42 +19,41 @@
 ![История операция для ветки branch1](/screenshots/git_log_branch1.png)
 
 **Разрешение конфликта слияния**
+В процессе разрешения конфликта слияния было принято решение оставить **mergefile.txt** в том виде, в котором он был представлен в ветке **master**
 ![Разрешение конфликта слияния](/screenshots/merge_conflict_resolution.png)
 
 **Коммит о слиянии веток**
 ![Коммит о слиянии веток](/screenshots/merge_commit.png)
 
 **Удаление ветки**
+
 ![Удаление ветки](/screenshots/delete_branch1.png)
 
 **Добавление папки со скриншотами в репозиторий**
 ![Добавление папки со скриншотами в репозиторий](/screenshots/screenshots_added.png)
 
 **Создание ветки для отчёта**
+
 ![Создание ветки для отчёта](/screenshots/branch_report.png)
 
 **Лог команд**
 ```
-git clone https://github.com/tush00nka/LR6.git
-cd LR6/
-git pull
- git log origin/branch1
-git switch branch1
-git switch master
-git merge branch1
-git commit -m "Merged branch1"
-git branch1 --delete
-git branch --delete branch1
-mv ../Документы/3\\ semester/programming_basics/lab6/screenshots/ ./screenshots
-git status
-git commit -m "screenshots folder added"
-vim the_file.txt
-git commit -m "the_file.txt modified"
-git revert 6bd43e0
-git commit -m "reverted the_file.txt modification"
-cat the_file.txt
-git branch report
-git switch report
+git clone https://github.com/tush00nka/LR6.git  - клонирование репозитория на компьютер
+cd LR6/  - переход в папку репозитория
+git pull  - подтягивание изменений
+git log origin/branch1  - получение истории операций для ветки branch1
+git merge branch1  - слияние с веткой branch1
+git commit -m "Merged branch1"  - коммит об успешном слиянии
+git branch --delete branch1  - удаление ветки branch1
+mv ../Документы/3\\ semester/programming_basics/lab6/screenshots/ ./screenshots - добалвяем папку со скриншотами
+git status  - получение статуса репозитория
+git commit -m "screenshots folder added"  - коммит
+vim the_file.txt  - изменение файла the_file.txt
+git commit -m "the_file.txt modified"  - коммит
+git revert 6bd43e0  - откат коммита
+git commit -m "reverted the_file.txt modification"  - коммит об откате коммита
+git branch report  - создание ветки для отчёта
+git switch report  - переключение на ветку отчёта
 ```
 
 **История операций**
